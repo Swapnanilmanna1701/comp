@@ -1,0 +1,68 @@
+export const suggestions = [
+    { emoji: "🎸", text: "Learn a musical instrument" },
+    { emoji: "📷", text: "Find image of a scenic beach" },
+    {
+      emoji: "🏞️",
+      text: "generate AI image of a peaceful forest, with dragons and fantasy beatiful fairies, realistic 8k",
+    },
+    { emoji: "👴", text: "Retirement savings guide" },
+    { emoji: "💡", text: "5 energy-saving tips" },
+    { emoji: "📱", text: "Tech gadget wishlist" },
+    { emoji: "🕺", text: "Let's play 90s trivia" },
+    { emoji: "💃", text: "Online dance classes" },
+    { emoji: "🍳", text: "Quick and easy recipes" },
+    { emoji: "🌿", text: "Sustainable living tips" },
+    { emoji: "📚", text: "Book recommendations" },
+    { emoji: "🧘", text: "Beginner's guide to meditation" },
+    { emoji: "🎨", text: "DIY home decor ideas" },
+    { emoji: "🐕", text: "Dog training techniques" },
+    { emoji: "💼", text: "Career development advice" },
+    { emoji: "🌎", text: "Eco-friendly travel tips" },
+    { emoji: "🧠", text: "Memory improvement exercises" },
+  ];
+  
+  export const additionalSuggestions = [
+    { emoji: "🏋️", text: "Find image of a gym" },
+    { emoji: "🎬", text: "Must-watch movies" },
+    { emoji: "📝", text: "Creative writing prompts" },
+    { emoji: "🌇", text: "Find images of city skylines at dusk" },
+    { emoji: "🎆", text: "Find image of a fireworks display" },
+    { emoji: "🎮", text: "Top video games" },
+    { emoji: "🍿", text: "Snack ideas for movie night" },
+    { emoji: "🧩", text: "Brain-teasing puzzles" },
+    { emoji: "🌸", text: "Find images of rose" },
+    { emoji: "✈️", text: "Travel destination guides" },
+    { emoji: "🖥️", text: "Remote work best practices" },
+    { emoji: "🎤", text: "Public speaking tips" },
+    { emoji: "🛠️", text: "DIY repair projects" },
+    { emoji: "📈", text: "Investment strategies" },
+    { emoji: "🧵", text: "Sewing and knitting patterns" },
+    { emoji: "🍷", text: "Wine tasting tips" },
+    { emoji: "🎧", text: "Podcast recommendations" },
+  ];
+  
+  export const creativeSuggestions = [
+    {
+      emoji: "🖼️",
+      text: "Generate AI image of a futuristic robot companion",
+    },
+    {
+      emoji: "🌌",
+      text: "Generate AI image of a spaceship exploring the galaxy",
+    },
+    { emoji: "🧙", text: "Fantasy world-building guide" },
+    { emoji: "🖌️", text: "Abstract painting techniques" },
+    {
+      emoji: "✨",
+      text: "Generate AI image of a futuristic cityscape at night",
+    },
+    { emoji: "📜", text: "Historical fiction writing tips" },
+    { emoji: "🎨", text: "Mixed media art projects" },
+    { emoji: "🎵", text: "Compose your own music" },
+    { emoji: "📸", text: "Creative photography ideas" },
+    { emoji: "📖", text: "Write a choose-your-own-adventure story" },
+    { emoji: "🎤", text: "Voice acting techniques" },
+    { emoji: "🖥️", text: "Digital art creation tips" },
+    { emoji: "🎭", text: "Costume design for theater" },
+    { emoji: "📚", text: "Curate a themed book collection" },
+  ];
