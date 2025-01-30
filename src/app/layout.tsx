@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     "Advanced Meta AI with faster responses, realtime weather updates, AI image generation and internet image search, realtime news fetch!🔥🦙",
   authors: [
     {
-      name: "Anish",
-      url: "https://dub.sh/anish7",
+      name: "Swapnanil",
+      
     },
   ],
   manifest: "/manifest.json",
