@@ -4,7 +4,15 @@
 
 import { useChat, Message } from "ai/react";
 import remarkGfm from "remark-gfm";
-import { Play, Pause, X, PlusCircle, SendHorizonal, Mic, RotateCcw } from "lucide-react";
+import {
+  Play,
+  Pause,
+  X,
+  PlusCircle,
+  SendHorizonal,
+  Mic,
+  RotateCcw,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
@@ -37,7 +45,7 @@ export default function Chat() {
     async onToolCall({ toolCall }) {
       if (toolCall.toolName === "generateAIImage") {
         const { imgprompt } = toolCall.args as { imgprompt: string };
-       
+
         const res = await fetch(
           "https://ai-image-api.workers.dev/img?model=flux-schnell&prompt=" +
             imgprompt
@@ -57,7 +65,7 @@ export default function Chat() {
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const audioChunks = useRef<Blob[]>([]);
   const messageContainerRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     if (recording) {
       startRecording();
@@ -188,7 +196,7 @@ export default function Chat() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex items-center justify-between gap-3 p-4 border-b border-gray-800/60 rounded-b-md backdrop-blur"
+        className="flex items-center justify-between gap-3 p-4 border-b border-gray-800/60 rounded-b-lg border-pink-700 backdrop-blur"
       >
         <div className="flex items-center gap-3">
           <Image
@@ -199,7 +207,7 @@ export default function Chat() {
           />
 
           <div>
-            <h1 className="font-semibold">Cazz AI</h1>
+            <h1 className="font-bold text-2xl">Cazz AI</h1>
             <div className="text-sm text-muted-foreground inline-flex">
               with
               <TextRotate
@@ -224,7 +232,7 @@ export default function Chat() {
           </div>
         </div>
         <Button
-        className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300"
+          className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300"
           //variant="ghost"
           size="icon"
           onClick={() => {
@@ -237,7 +245,7 @@ export default function Chat() {
 
       {/* Messages */}
       <div
-        className="flex-1 overflow-y-auto p-4 space-y-4"
+        className="flex-1 overflow-y-auto p-4 space-y-4 bg-black"
         ref={messageContainerRef}
       >
         {error && (
