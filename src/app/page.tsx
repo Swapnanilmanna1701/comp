@@ -4,7 +4,7 @@
 
 import { useChat, Message } from "ai/react";
 import remarkGfm from "remark-gfm";
-import { Play, Pause, X, PlusCircle, SendHorizonal, Mic } from "lucide-react";
+import { Play, Pause, X, PlusCircle, SendHorizonal, Mic, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
@@ -199,7 +199,7 @@ export default function Chat() {
           />
 
           <div>
-            <h1 className="font-semibold">Meta AI</h1>
+            <h1 className="font-semibold">Cazz AI</h1>
             <div className="text-sm text-muted-foreground inline-flex">
               with
               <TextRotate
@@ -224,13 +224,14 @@ export default function Chat() {
           </div>
         </div>
         <Button
-          variant="ghost"
+        className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300"
+          //variant="ghost"
           size="icon"
           onClick={() => {
             window.location.reload();
           }}
         >
-          <PlusCircle size={32} />
+          <RotateCcw size={32} className="text-blue-500" />
         </Button>
       </motion.header>
 
@@ -293,7 +294,7 @@ export default function Chat() {
                     <Button
                       key={i}
                       variant="outline"
-                      className="rounded-full bg-gray-700/30 hover:bg-gray-700/40 text-gray-300/90"
+                      className="rounded-full  bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 hover:bg-blue-600 text-white hover:text-black"
                       onClick={() =>
                         handleInputChange({
                           target: { value: suggestion.text },
@@ -310,7 +311,7 @@ export default function Chat() {
                       <Button
                         key={i}
                         variant="outline"
-                        className="rounded-full bg-gray-700/30 hover:bg-gray-700/40 text-gray-300/90"
+                        className="rounded-full  bg-gradient-to-r to-pink-600 via-violet-500 from-cyan-300 hover:bg-gray-700/40 text-white hover:text-black"
                         onClick={() =>
                           handleInputChange({
                             target: { value: suggestion.text },
@@ -328,7 +329,7 @@ export default function Chat() {
                       <Button
                         key={i}
                         variant="outline"
-                        className="rounded-full bg-gray-700/30 hover:bg-gray-700/40 text-gray-300/90"
+                        className="rounded-full  bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 hover:bg-gray-700/40 text-white hover:text-black"
                         onClick={() =>
                           handleInputChange({
                             target: { value: suggestion.text },
@@ -535,15 +536,15 @@ export default function Chat() {
           <AutosizeTextarea
             value={input}
             onChange={handleInputChange}
-            placeholder="Message"
+            placeholder="Chat with CazzAI"
             minHeight={38}
             maxHeight={100}
-            className="rounded-3xl pl-5 pt-3 resize-none bg-gray-800/90"
+            className="rounded-3xl pl-5 pt-3 resize-none bg-gradient-to-r to-cyan-300 from-pink-700 via-violet-500 w-full text-white"
           />
           {input.length > 0 ? (
             <Button
               type="submit"
-              className="rounded-full bg-green-500 hover:bg-green-600 size-12 shrink-0"
+              className="rounded-full bg-gradient-to-r to-cyan-300 from-pink-700 via-violet-500 w-full hover:bg-green-600 size-12 shrink-0"
               disabled={isLoading}
             >
               <SendHorizonal size={24} className="translate-x-px" />
@@ -552,7 +553,7 @@ export default function Chat() {
             <Button
               type="button"
               className={cn(
-                "rounded-full bg-green-500 hover:bg-green-600 size-12 shrink-0",
+                "rounded-full bg-gradient-to-r to-cyan-300 from-blue-700  w-full hover:bg-green-600 size-12 shrink-0 text-white",
                 recording && "bg-gray-700 hover:bg-gray-800"
               )}
               onClick={() => setRecording(!recording)}
