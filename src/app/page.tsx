@@ -39,7 +39,7 @@ export default function Chat() {
         const { imgprompt } = toolCall.args as { imgprompt: string };
        
         const res = await fetch(
-          "https://ai-image-api.xeven.workers.dev/img?model=flux-schnell&prompt=" +
+          "https://ai-image-api.workers.dev/img?model=flux-schnell&prompt=" +
             imgprompt
         );
         const imgResponse = await res.blob();
