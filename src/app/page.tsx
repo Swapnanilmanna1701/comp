@@ -286,7 +286,7 @@ export default function Chat() {
                 />
 
                 <h2 className="text-2xl md:text-4xl tracking-tight font-semibold word-spacing-4">
-                  Ask Meta AI anything
+                  Ask Cazz AI anything
                 </h2>
               </div>
 
