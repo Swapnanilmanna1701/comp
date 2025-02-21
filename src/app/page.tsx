@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-
+import TextGradient from "@/components/textgradient"
+import Preview from "@/components/preview"
+import NavButton from "@/components/navlogo"
 import { useChat, Message } from "ai/react";
 import RefButton from "@/components/refbutton";
 
@@ -202,7 +204,7 @@ export default function Chat() {
           <LogoLoader />
 
           <div>
-            <h1 className="font-bold text-2xl">Cazz AI</h1>
+            <h1 className="font-bold text-2xl"><TextGradient /></h1>
             <div className="text-sm text-muted-foreground inline-flex">
               with
               <TextRotate
@@ -265,7 +267,7 @@ export default function Chat() {
                 
 
                 <h2 className="text-2xl md:text-4xl tracking-tight font-semibold word-spacing-4">
-                  Ask {" "} <span>Cazz AI</span> anything
+                    <Preview />  
                 </h2>
               </div>
 
@@ -316,7 +318,7 @@ export default function Chat() {
                       <Button
                         key={i}
                         variant="outline"
-                        className="rounded-full  bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300 hover:bg-gray-700/40 text-white hover:text-black"
+                        className="rounded-full border border-blue-600 bg-black hover:text-blue-600 hover:bg-black hover:border-white text-white "
                         onClick={() =>
                           handleInputChange({
                             target: { value: suggestion.text },

@@ -10,6 +10,22 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        textGradient: 'textGradient 5s ease infinite',
+      },
+      keyframes: {
+        textGradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
+      },
+      
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
