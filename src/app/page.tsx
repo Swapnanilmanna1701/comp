@@ -3,17 +3,20 @@
 "use client";
 
 import { useChat, Message } from "ai/react";
+import RefButton from "@/components/refbutton";
+import CubeLoader from "@/components/cube";
 import remarkGfm from "remark-gfm";
 import {
   Play,
   Pause,
   X,
-  PlusCircle,
+  
   SendHorizonal,
   Mic,
   RotateCcw,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LogoLoader from "@/components/logoo";
 import { cn } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -185,12 +188,7 @@ export default function Chat() {
   };
 
   return (
-    <div className="flex flex-col h-svh bg-gray-950/70 text-white max-w-2xl mx-auto rounded-2xl relative">
-      <Image
-        src={bg}
-        alt="whatsapp background"
-        className="absolute inset-0 -z-10 border object-cover size-full opacity-15"
-      />
+    <div className="flex flex-col h-svh bg-black text-white max-w-3xl mx-auto rounded-2xl relative">
       {/* Header */}
       <motion.header
         initial={{ opacity: 0, y: -20 }}
@@ -198,13 +196,8 @@ export default function Chat() {
         transition={{ duration: 0.5 }}
         className="flex items-center justify-between gap-3 p-4 border-b border-gray-800/60 rounded-b-lg border-pink-700 backdrop-blur"
       >
-        <div className="flex items-center gap-3">
-          <Image
-            src={meta}
-            alt="meta ai logo"
-            width={36}
-            className="logo-shadow"
-          />
+        <div className="flex items-center gap-5 ml-4">
+          <LogoLoader />
 
           <div>
             <h1 className="font-bold text-2xl">Cazz AI</h1>
@@ -232,14 +225,14 @@ export default function Chat() {
           </div>
         </div>
         <Button
-          className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300"
+          className="bg-clip-text mr-8 text-transparent bg-gradient-to-r from-pink-600 via-violet-500 to-cyan-300"
           //variant="ghost"
           size="icon"
           onClick={() => {
             window.location.reload();
           }}
         >
-          <RotateCcw size={32} className="text-blue-500" />
+          <RefButton />
         </Button>
       </motion.header>
 
@@ -266,24 +259,8 @@ export default function Chat() {
               transition={{ duration: 0.5 }}
             >
               <div className="relative flex flex-col items-center justify-center mt-20 md:mt-32 gap-4">
-                <Image
-                  src={meta}
-                  alt="meta ai logo"
-                  width={130}
-                  placeholder="blur"
-                  fetchPriority="high"
-                  loading="eager"
-                  className="meta-spin cursor-pointer"
-                />
-                <Image
-                  src={meta}
-                  alt="meta ai logo"
-                  width={130}
-                  placeholder="blur"
-                  fetchPriority="low"
-                  loading="lazy"
-                  className="meta-spin absolute top-0 rotate-12 blur-xl opacity-70 cursor-pointer"
-                />
+                <CubeLoader />
+                
 
                 <h2 className="text-2xl md:text-4xl tracking-tight font-semibold word-spacing-4">
                   Ask Cazz AI anything
