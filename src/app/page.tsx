@@ -4,6 +4,7 @@
 
 import { useChat, Message } from "ai/react";
 import RefButton from "@/components/refbutton";
+
 import CubeLoader from "@/components/cube";
 import remarkGfm from "remark-gfm";
 import {
@@ -17,6 +18,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LogoLoader from "@/components/logoo";
+import UserLoader from "@/components/user";
 import { cn } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -263,7 +265,7 @@ export default function Chat() {
                 
 
                 <h2 className="text-2xl md:text-4xl tracking-tight font-semibold word-spacing-4">
-                  Ask Cazz AI anything
+                  Ask {" "} <span>Cazz AI</span> anything
                 </h2>
               </div>
 
@@ -343,24 +345,20 @@ export default function Chat() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className={cn(
-                  "flex gap-1 md:gap-2 max-w-xl",
+                  "flex gap-1 ml-5 md:gap-5 max-w-xl",
                   message.role === "user" ? "w-fit ml-auto" : ""
                 )}
               >
                 {message.role !== "user" && (
-                  <Image
-                    src={meta}
-                    alt="meta ai logo"
-                    width={30}
-                    className="logo-shadow size-6 md:size-7"
+                  <LogoLoader
                   />
                 )}
                 <div
                   className={cn(
-                    "rounded-xl px-3 py-1 break-words",
+                    "rounded-xl px-3 py-1 mr-5 break-words",
                     message.role === "user"
-                      ? "bg-green-600 rounded-tr-none"
-                      : "bg-gray-800 rounded-tl-none"
+                      ? "bg-gradient-to-r from-blue-600 to-cyan-300 rounded-tr-none"
+                      : "bg-gradient-to-r from-blue-800 to-violet-500  rounded-tl-none"
                   )}
                 >
                   {message.toolInvocations?.some(
@@ -433,7 +431,7 @@ export default function Chat() {
                       "text-[10px] -mt-1.5",
                       message.role === "user"
                         ? "text-gray-300 ml-auto text-end w-full"
-                        : "text-gray-500"
+                        : "text-cyan-300"
                     )}
                   >
                     {new Date().toLocaleTimeString([], {
@@ -443,7 +441,7 @@ export default function Chat() {
                   </p>
                 </div>
                 {message.role === "user" && (
-                  <div className="size-7 bg-gradient-to-br to-green-600 from-cyan-500 via-emerald-500 rounded-full" />
+                  <UserLoader />
                 )}
               </motion.div>
             )
