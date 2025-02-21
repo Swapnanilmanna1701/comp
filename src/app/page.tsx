@@ -359,7 +359,7 @@ export default function Chat() {
                   className={cn(
                     "rounded-xl px-3 py-1 mr-5 break-words",
                     message.role === "user"
-                      ? "bg-gradient-to-r from-blue-600 to-cyan-300 rounded-tr-none"
+                      ? "bg-gradient-to-r from-blue-700  to-pink-700 rounded-tr-none"
                       : "bg-gradient-to-r from-blue-800 to-violet-500  rounded-tl-none"
                   )}
                 >
